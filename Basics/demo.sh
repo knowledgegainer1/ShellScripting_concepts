@@ -3,5 +3,5 @@
 x='demo'
 y='remo'
 
-z=$x'+'$y
+z=$x+$y
 echo "this is ${z}"

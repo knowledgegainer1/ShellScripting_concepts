@@ -2,7 +2,7 @@
 
 x=$(id -u)
 
-if [ $x -ne 0]
+if [ $x -ne 0 ]
 then
   echo "please access with sudo user"
   y=$(echo $?)

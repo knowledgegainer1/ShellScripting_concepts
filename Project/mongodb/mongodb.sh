@@ -13,6 +13,7 @@ validate (){
      echo -e "$2 ....$R FAILED $N"
     else
      echo  -e "$2 ...$R Success $N"
+    fi
 }
 if [ $id -ne 0 ]
 then

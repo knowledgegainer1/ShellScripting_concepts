@@ -12,7 +12,7 @@ validate (){
     then
      echo -e "$2 ....$R FAILED $N"
     else
-     echo  -e "$2 ...$R Success $N"
+     echo  -e "$2 ...$G Success $N"
     fi
 }
 if [ $id -ne 0 ]
@@ -28,7 +28,7 @@ systemctl start mongod &>> $folder_path
 
 
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf &>> $folder_path
-validate $? "Copy to mongo repo"
+validate $? "renamed"
 systemctl restart mongod
 
 dnf install mongodb-org -y 

@@ -46,8 +46,7 @@ cd /app
 unzip -o /tmp/catalogue.zip  &>> $folder_path
 npm install &>> $folder_path
 validate $? "dependencied Installation"
-cp /home/centos/ShellScripting_concepts/Project/catalogue/catalogue.service /etc/systemd/system/catalogue.service
-
+cp catalogue.service /etc/systemd/system/catalogue.service
 systemctl daemon-reload
 
 

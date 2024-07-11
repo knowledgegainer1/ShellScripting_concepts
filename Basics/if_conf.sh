@@ -9,4 +9,4 @@ then
   exit $y
 else
   echo "u are sudo user"
-
+fi

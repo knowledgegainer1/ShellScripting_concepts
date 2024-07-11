@@ -35,11 +35,11 @@ then
  useradd roboshop
  validate $? "creating roboshop  user"
 else
- echo "User already created to $Y SKIPPING $N"
+ echo -e "User already created to $Y SKIPPING $N"
 fi
 
 
-mkdir /app
+mkdir -p /app
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip
 cd /app
 unzip /tmp/catalogue.zip  &>> $folder_path

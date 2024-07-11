@@ -46,13 +46,13 @@ cd /app
 unzip -o /tmp/catalogue.zip  &>> $folder_path
 npm install &>> $folder_path
 validate $? "dependencied Installation"
-cp catalogue.service /etc/systemd/system/catalogue.service
+cp /home/centos/ShellScripting_concepts/Project/catalogue/catalogue.service /etc/systemd/system/catalogue.service
 systemctl daemon-reload
 
 
 systemctl enable catalogue
 systemctl start catalogue &>> $folder_path
-cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $folder_path
+cp /home/centos/ShellScripting_concepts/Project/catalogue/mongo.repo /etc/yum.repos.d/mongo.repo &>> $folder_path
 validate $? "mongorepo copied"
 dnf install mongodb-org-shell -y &>> $folder_path
 validate $? "mongo client Installation"

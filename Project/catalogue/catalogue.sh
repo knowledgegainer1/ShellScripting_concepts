@@ -40,6 +40,7 @@ fi
 
 
 mkdir -p /app
+rm -rf /tmp/catalogue.zip 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip -y
 cd /app
 unzip /tmp/catalogue.zip  &>> $folder_path

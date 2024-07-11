@@ -8,4 +8,4 @@ then
  echo "Error: please login with sudo user and try"
  exit 1
 fi
-echo "details saved to $folder_path"
+echo "details saved to $folder_path" &>> $folder_path

@@ -33,3 +33,5 @@ systemctl restart mongod
 
 dnf install mongodb-org -y 
 validate $? "mongoDB Installation.."
+
+netstat -lntp | grep 27017 &>> $folder_path

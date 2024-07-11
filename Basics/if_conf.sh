@@ -11,3 +11,8 @@ else
 fi
 
 yum install nginx -y
+if [ $? -e 0 ]
+then
+echo "installation successful"
+else
+ echo " installation failed"

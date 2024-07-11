@@ -8,3 +8,4 @@
 
 exam=("apple" "sdc" "efw")
 echo "${exam[0]} ${exam[1]} ${exam[2]} "
+exam.length

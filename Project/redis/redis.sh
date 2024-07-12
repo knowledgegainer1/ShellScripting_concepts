@@ -13,7 +13,7 @@ validate() {
         echo -e " $2 ....is $R FAIED $N"
         exit 1
     else
-        echo -e " $2 ... is $R Completed $N"
+        echo -e " $2 ... is $G Completed $N"
     fi
 }
 
@@ -32,6 +32,7 @@ dnf install redis -y &>>$path
 validate $? "redis Instalaltion is "
 
 sed -i 's/127.0.0.1/0.0.0.0/' /etc/redis.conf &>>$path
+sed -i 's/127.0.0.1/0.0.0.0/' /etc/redis/redis.conf &>>$path
 validate $? "Ip change is "
 systemctl enable redis
 systemctl start redis

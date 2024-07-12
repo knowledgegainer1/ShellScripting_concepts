@@ -9,7 +9,7 @@ Y="\e[33m"
 N="\e[0m"
 
 validate (){
-    if[ $1 -ne 0 ]
+    if [ $1 -ne 0 ]
     then
      echo " $2 ....is $R FAIED $N"
     else

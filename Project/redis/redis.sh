@@ -14,6 +14,7 @@ validate (){
      echo " $2 ....is $R FAIED $N"
     else
      echo " $2 ... is $R Completed $N"
+    f1
 }
 if [ $id -ne 0 ]
 then

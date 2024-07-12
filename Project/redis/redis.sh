@@ -31,8 +31,8 @@ validate $? "modile enable  is "
 dnf install redis -y &>>$path
 validate $? "redis Instalaltion is "
 
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/redis.conf &>>$path
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/redis/redis.conf &>>$path
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/redis.conf &>>$path
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/redis/redis.conf &>>$path
 validate $? "Ip change is "
 systemctl enable redis
 systemctl start redis

@@ -12,13 +12,16 @@ validate () {
     if [ $1 -ne 0 ]
     then
      echo " $2 ....is $R FAIED $N"
+     exit 1
     else
      echo " $2 ... is $R Completed $N"
-    f1
+    fi
 }
+
 if [ $id -ne 0 ]
 then
- echo "Error:please login with $R sudo  $N user"
+    echo "Error: please login with $R sudo  $N user"
+    exit 1
 fi
 
 dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>> $path
@@ -35,4 +38,4 @@ validate $? "Ip change is "
 systemctl enable redis
 systemctl start redis
 netstat -lntp | head -n 3
-systemctl status redis | grep Active 
+systemctl status redis | grep Active}

@@ -11,5 +11,16 @@ then
 fi
 files_array=($files)
 
-echo "$files_array"
-?
+echo "${files_array[@]}"
+
+# for line in "${files_array[@]}"; do
+#   rm -rf "$line"
+# done
+# while IFS= read -r line
+# do
+#  rm -rf $line
+# done <<< $files
+
+
+# for line  in ${files[@]}
+# rm -rf $line

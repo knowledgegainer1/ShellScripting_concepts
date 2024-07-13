@@ -13,5 +13,5 @@ fi
 
 while IFS= read -r line
 do
-rm -rf $line
+ rm -rf $line
 done <<< $files

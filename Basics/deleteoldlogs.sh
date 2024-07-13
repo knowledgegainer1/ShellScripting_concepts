@@ -9,9 +9,7 @@ then
  echo "error folder foesnt exist so creating directoei $source_dir"
  mkdir $source_dir
 fi
+files_array=($files)
 
-
-while IFS= read -r line
-do
- rm -rf $line
-done <<< $files
+echo "$files_array"
+?

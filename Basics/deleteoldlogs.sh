@@ -1,7 +1,4 @@
-
-
-
-
+#!/bin/bash
 source_dir="/tmp/logs_folder"
 files=$(find $source_dir -type f -mtime +14 -name "*.log")
 if [ ! -d $source_dir ]

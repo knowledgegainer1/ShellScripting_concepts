@@ -11,7 +11,7 @@ then
 fi
 
 
-when IFS=read -r line
+while IFS= read -r line
 do
 rm -rf $line
 done <<< $files
